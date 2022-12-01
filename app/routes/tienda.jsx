@@ -1,3 +1,15 @@
+import { getGuitarras } from "~/models/guitarras.server"
+
+
+
+export async function loader(){
+  
+  const guitarras = await getGuitarras()
+  
+  return guitarras;
+}
+
+
 export function meta() {
   return {
       title: 'GuitarLA - Tienda'
