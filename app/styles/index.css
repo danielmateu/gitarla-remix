@@ -73,13 +73,15 @@ main {
 
 .header .navegacion{
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
     margin-top:5rem;
 }
 
 @media (min-width: 768px) {
     .header .navegacion{
         margin-top:0;
+        flex-direction: row;
     }
 }
 .header .navegacion a{
@@ -125,8 +127,9 @@ main {
 
 .footer .navegacion{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    justify-content: space-around;
 }
 
 @media (min-width: 768px){
@@ -140,13 +143,10 @@ main {
 .footer .navegacion a,
 .footer .copyright{
     color: var(--white);
-    font-size: 2rem;
+    font-size:1.5rem;
     text-decoration: none;
     font-weight: 700;
+    text-align: center;
 }
 
-.footer .copyright{
-    text-align: center;
-    font-size:1.5rem
-}
 
