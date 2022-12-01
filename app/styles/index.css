@@ -20,8 +20,8 @@ body {
     font-size: 2rem;
     font-family: var(--fuente-principal);
     line-height: 1.5;
-    background-color: #262626;
-    color: #FFF;
+    /* background-color: #262626; */
+    /* color: #FFF; */
 }
 
 img {
