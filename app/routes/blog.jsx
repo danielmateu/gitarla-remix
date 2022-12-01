@@ -8,7 +8,7 @@ export function links(){
     return [
         {
             rel: 'stylesheet',
-            href: ''
+            href: '/blog'
         }
     ]
 }

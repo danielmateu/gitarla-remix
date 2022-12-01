@@ -10,7 +10,7 @@ export function links(){
     return [
         {
             rel: 'stylesheet',
-            href: ''
+            href: '/nosotros'
         }
     ]
 }

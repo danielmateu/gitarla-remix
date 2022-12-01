@@ -7,6 +7,7 @@ import {
 } from '@remix-run/react'
 import  Header  from '~/components/header'
 import styles from '~/styles/index.css'
+import { Footer } from './components/footer'
 
 
 export function meta() {
@@ -69,6 +70,8 @@ const Document = ({children}) => {
 
                 <Scripts/>
                 <LiveReload/>
+
+                <Footer/>
             </body>
         </html>
     )
