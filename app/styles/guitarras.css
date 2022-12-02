@@ -38,6 +38,8 @@
     border: 1px solid rgba(251, 251, 251, 0.09);
     padding: 1em;
     transition: all 0.2s ease-in-out;
+    max-width: 70rem;
+    /* margin: 0 auto; */
 }
 
 .guitarra:hover{
@@ -46,10 +48,15 @@
 
 .guitarra .contenido {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: center;
 }
 
 .guitarra .contenido h3 {
     font-size: 2rem;
+    justify-self: flex-start;
     text-transform: uppercase;
     margin: 0;
 }
@@ -70,7 +77,9 @@
 
 .enlace {
     padding: 1rem;
-    
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
     text-decoration: none;
     text-transform: lowercase;
     color: var(--black);
@@ -80,6 +89,8 @@
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
 }
+
+
 
 .enlace:hover {
     /*border-bottom: 4px solid var(--primary);
