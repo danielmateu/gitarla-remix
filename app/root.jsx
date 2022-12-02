@@ -4,6 +4,8 @@ import {
     Outlet,
     Scripts,
     LiveReload,
+    useCatch,
+    Link,
 } from '@remix-run/react'
 import  Header  from '~/components/header'
 import styles from '~/styles/index.css'
@@ -19,6 +21,8 @@ export function meta() {
         }
     )
 }
+
+
 
 
 
@@ -77,3 +81,27 @@ const Document = ({children}) => {
     )
 }
 
+
+// MANEJO DE ERRORES
+
+export function CatchBoundary(){
+    const error = useCatch();
+    return(
+        <Document>
+            <p className="error">{error.status} {error.statusText}</p>
+            <Link to='/tienda' className="error-enlace">Quieres volver a la tienda?</Link>
+        </Document>
+    )
+
+}
+
+export function ErrorBOundary({error}){
+
+    return(
+        <Document>
+            <p className="error">{error.status} {error.statusText}</p>
+            <Link to='/tienda' className="error-enlace">Quieres volver a la tienda?</Link>
+        </Document>
+    )
+
+}
