@@ -7,9 +7,12 @@ import styles from '~/styles/blog.css'
 
 
 export function meta() {
-    return {
-        title: 'GuitarLA - Blog'
-    }
+    
+        return{
+            title: 'GuitarLA - Nuestro Blog',
+            description: `Guitarras, blog de música y venta de guitarras`
+        }
+    
 }
 
 export function links(){
