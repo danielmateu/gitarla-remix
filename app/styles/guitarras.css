@@ -75,31 +75,3 @@
     font-weight: 900;
 }
 
-.enlace {
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    text-decoration: none;
-    text-transform: lowercase;
-    color: var(--black);
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-}
-
-
-
-.enlace:hover {
-    /*border-bottom: 4px solid var(--primary);
-    */
-    color: var(--primary);
-    background: var(--black);
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-}
