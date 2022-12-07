@@ -15,8 +15,13 @@
     }
 }
 
-.post{
-    
+
+
+.post .fecha{
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+
 }
 
 .post .contenido{

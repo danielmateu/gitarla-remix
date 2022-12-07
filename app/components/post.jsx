@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import formatearFecha from "~/utils/helpers";
 
 
 export const Post = ({ post }) => {
@@ -8,7 +9,7 @@ export const Post = ({ post }) => {
             <img className='imagen' src={imagen.data.attributes.formats.medium.url} alt={`imagen blog ${titulo}`} />
             <div className="contenido">
                 <h3 className="titulo">{titulo}</h3>
-                <p className="fecha">publicado en: {publishedAt}</p>
+                <p className="fecha">{formatearFecha(publishedAt)}</p>
                 <p className="resumen">{contenido}</p>
                 <Link to={`/post/${url}`} className='enlace'>Leer post</Link>
             </div>
