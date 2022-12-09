@@ -8,7 +8,7 @@ export function meta() {
     }
 }
 
-export function links(){
+export function links() {
     return [
         {
             rel: 'stylesheet',
@@ -30,13 +30,14 @@ const Nosotros = () => {
             <div className="contenido">
                 <img src={imagen} alt="Imagen sobre nosotros" />
                 <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum veniam reiciendis id, debitis omnis officia consequatur nihil et impedit tempore. Earum quasi veritatis illum eligendi sit atque dolorem commodi iste.
-                    Soluta totam veniam dignissimos atque cum magni ex, tempora excepturi aut cupiditate rem ut commodi saepe ullam quos. Tenetur aperiam vel quos laudantium iure fugiat omnis sunt qui. Hic, dolorem.
+                    <p>
+                        Bienvenido a nuestra tienda online de guitarras. Somos una empresa dedicada a la venta de guitarras de alta calidad de diferentes marcas reconocidas en el mundo de la música.
                     </p>
-                    <p>Odit explicabo quae facilis fugit aut impedit cumque ex dicta quisquam, et, laudantium excepturi ullam, similique reiciendis nemo tempore magni dolore eaque possimus dolorem omnis ducimus. Architecto dicta officia ipsam.
-                    Adipisci asperiores, inventore dolore esse voluptatum velit et laborum culpa unde impedit natus iste voluptas quos molestias non veniam necessitatibus incidunt suscipit quibusdam amet aliquam, libero reiciendis repellendus voluptatem? Ducimus?</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum veniam reiciendis id, debitis omnis officia consequatur nihil et impedit tempore. Earum quasi veritatis illum eligendi sit atque dolorem commodi iste.
-                    Soluta totam veniam dignissimos atque cum magni ex, tempora excepturi aut cupiditate rem ut commodi saepe ullam quos. Tenetur aperiam vel quos laudantium iure fugiat omnis sunt qui. Hic, dolorem.
+                    <p>
+                        Ofrecemos una amplia selección de guitarras acústicas, eléctricas y clásicas para satisfacer las necesidades de todos los músicos, desde principiantes hasta profesionales.
+                    </p>
+                    <p>
+                        Además, contamos con un equipo de expertos en guitarras que están dispuestos a ayudarlo en su elección y a responder cualquier pregunta que pueda tener. ¡Explora nuestro catálogo y encuentra la guitarra perfecta para ti!
                     </p>
                 </div>
             </div>

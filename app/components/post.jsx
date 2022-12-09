@@ -11,7 +11,7 @@ export const Post = ({ post }) => {
                 <h3 className="titulo">{titulo}</h3>
                 <p className="fecha">{formatearFecha(publishedAt)}</p>
                 <p className="resumen">{contenido}</p>
-                <Link to={`/posts/${url}`} className='enlace'>Leer post</Link>
+                <Link to={`/blog/${url}`} className='enlace'>Leer post</Link>
             </div>
         </article>
     )
