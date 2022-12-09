@@ -3,7 +3,10 @@ import { getGuitarras } from "~/models/guitarras.server";
 import { getPosts } from "~/models/posts.server";
 
 import ListadoGuitarras from '../components/listadoGuitarras';
+import { ListadoPosts } from '~/components/listadoPosts';
+
 import styles from "~/styles/guitarras.css"
+import postStyles from "~/styles/blog.css"
 
 
 export function links() {
@@ -11,6 +14,10 @@ export function links() {
         {
             rel: 'stylesheet',
             href: styles
+        },
+        {
+            rel: 'stylesheet',
+            href: postStyles
         }
     ]
 }
@@ -49,6 +56,11 @@ export const Index = () => {
                     guitarras={guitarras}
                 />
             </main>
+
+            <section className="contenedor">
+                <ListadoPosts
+                    posts={posts} />
+            </section>
         </>
     )
 }
