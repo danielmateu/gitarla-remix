@@ -11,7 +11,7 @@ export const Guitarra = ({guitarra}) => {
             <div className="contenido">
                 <h3>{nombre}</h3>
                 <p className="descripcion">{descripcion}</p>
-                <div className="precio">€ {precio}</div>
+                <div className="precio">€{precio}</div>
             <Link className="enlace" to={`/guitarras/${url}`}>Ver producto</Link>
             </div>
 
