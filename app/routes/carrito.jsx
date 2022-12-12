@@ -1,4 +1,6 @@
+import { useOutletContext } from '@remix-run/react'
 import styles from '~/styles/carrito.css'
+
 
 export function links() {
     return [
@@ -17,6 +19,8 @@ export function meta() {
 }
 
 const Carrito = () => {
+    const {carrito} = useOutletContext();
+    console.log(carrito)
     return (
         <main className="contenedor">
             <h1 className="heading">Carrito de compras</h1>

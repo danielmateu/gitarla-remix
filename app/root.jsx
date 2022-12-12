@@ -1,3 +1,6 @@
+
+
+
 import {
     Meta,
     Links,
@@ -7,6 +10,7 @@ import {
     useCatch,
     Link,
 } from '@remix-run/react'
+import { useState } from 'react'
 import  Header  from '~/components/header'
 import styles from '~/styles/index.css'
 import { Footer } from './components/footer'
@@ -54,9 +58,39 @@ export function links(){
 
 export default function App() {
 
+    const [carrito, setCarrito] = useState([])
+
+    const agregarCarrito = guitarra => {
+        // console.log('Agregando...', guitarra)
+        if(carrito.some(guitarraState => guitarraState.id === guitarra.id)){
+            // console.log('Ese elemento ya existe')
+            //Iterar sobre el arreglo e identificar el elemento duplicado
+            const carritoActualizado = carrito.map(guitarraState => {
+                if(guitarraState.id === guitarra.id){
+                    //Reescribir la cantidad
+                    guitarraState.cantidad = guitarra.cantidad
+                    // guitarraState.cantidad += guitarra.cantidad
+                }
+                return guitarraState
+            })
+            //añadir al carrito
+            setCarrito(carritoActualizado)
+        }else{
+            //Registro nuevo
+            setCarrito([...carrito, guitarra])
+        }
+    }
+
     return(
         <Document>
-            <Outlet/>
+            <Outlet
+                context={{
+                    // guitarLa: 'GuitarLA',
+                    // auth: true
+                    agregarCarrito,
+                    carrito
+                }}
+            />
         </Document>
     )
 }
