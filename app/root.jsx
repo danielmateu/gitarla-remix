@@ -26,10 +26,6 @@ export function meta() {
     )
 }
 
-
-
-
-
 export function links(){
     return [
         {
@@ -81,6 +77,16 @@ export default function App() {
         }
     }
 
+    const actualizarCantidad = guitarra => {
+        const carritoActualizado = carrito.map(guitarraState => {
+            if(guitarraState.id === guitarra.id){
+                guitarraState.cantidad = guitarra.cantidad
+            }
+            return guitarraState
+        })
+        setCarrito(carritoActualizado);
+    }
+
     return(
         <Document>
             <Outlet
@@ -88,7 +94,8 @@ export default function App() {
                     // guitarLa: 'GuitarLA',
                     // auth: true
                     agregarCarrito,
-                    carrito
+                    carrito,
+                    actualizarCantidad
                 }}
             />
         </Document>
