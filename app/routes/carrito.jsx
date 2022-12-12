@@ -1,7 +1,5 @@
 import styles from '~/styles/carrito.css'
 
-
-
 export function links() {
     return [
         {
@@ -14,7 +12,7 @@ export function links() {
 export function meta() {
     return{
         title: 'GuitarLA - Carrito de compras',
-        description: 'Venta de guitarras, musica, blog, carrito de compras'
+        description: 'Venta de guitarras, musica, blog, carrito de compras, tienda'
     }
 }
 
