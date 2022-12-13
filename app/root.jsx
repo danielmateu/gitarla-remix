@@ -1,6 +1,5 @@
 
 
-
 import {
     Meta,
     Links,
@@ -10,7 +9,7 @@ import {
     useCatch,
     Link,
 } from '@remix-run/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import  Header  from '~/components/header'
 import styles from '~/styles/index.css'
 import { Footer } from './components/footer'
@@ -54,7 +53,14 @@ export function links(){
 
 export default function App() {
 
-    const [carrito, setCarrito] = useState([])
+    const carritoLS = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('carrito')) ?? [] : null;
+    const [carrito, setCarrito] = useState(carritoLS);
+
+    /* Saving the state of the cart in the local storage. */
+    useEffect(() => {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }, [carrito])
+    
 
     const agregarCarrito = guitarra => {
         // console.log('Agregando...', guitarra)
@@ -87,6 +93,12 @@ export default function App() {
         setCarrito(carritoActualizado);
     }
 
+    const eliminarGuitarra = id => {
+        // const carritoActualizado = carrito.filter(guitarraState => guitarraState.id !== id);
+        // setCarrito(carritoActualizado);
+        setCarrito( carrito.filter(guitarraState => guitarraState.id !== id));
+    }
+
     return(
         <Document>
             <Outlet
@@ -95,7 +107,8 @@ export default function App() {
                     // auth: true
                     agregarCarrito,
                     carrito,
-                    actualizarCantidad
+                    actualizarCantidad,
+                    eliminarGuitarra
                 }}
             />
         </Document>

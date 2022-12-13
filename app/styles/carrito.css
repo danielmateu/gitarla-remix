@@ -26,6 +26,7 @@
     align-items: center;
     padding: 2rem 0;
     border-bottom: 4px solid #cfcfcf;
+    position: relative;
 }
 
 .producto p{
@@ -74,4 +75,22 @@
     -o-border-radius: 1rem;
     position: sticky;
     top: 3rem;
+}
+
+
+.btn-eliminar{
+    all: unset;
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    transition: .2s ease-in-out all;
+    -webkit-transition: .2s ease-in-out all;
+    -moz-transition: .2s ease-in-out all;
+    -ms-transition: .2s ease-in-out all;
+    -o-transition: .2s ease-in-out all;
+}
+
+.btn-eliminar:hover{
+    cursor: pointer;
+    color: rgb(189, 76, 76)
 }
